@@ -1,19 +1,21 @@
 .feature__container,
-.section__container,.hero__container{
+.section__container,
+.hero__container,
+.membership,.membership__card {
   display: flex;
 }
-section{
-  padding: 0 3rem
+section {
+  padding: 0 3rem;
 }
 
-.hero__container{
+.hero__container {
   flex-direction: column;
   justify-content: center;
 }
 
 .hero__container {
   background: url("../../assets/image/hero_Image.png");
-  background-position: bottom 0 right -160px;
+  background-position: bottom -100px right -160px;
   background-repeat: no-repeat;
   height: 100vh;
   overflow: hidden;
@@ -46,6 +48,26 @@ section{
   }
 }
 
+.section__container--header {
+  h2 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 130%;
+    /* identical to box height, or 47px */
+
+    text-align: center;
+    // margin: 0;
+
+    color: #282828;
+  }
+  p {
+    color: #3498db;
+    font-size: 24px;
+    margin: 0;
+  }
+}
 
 .feature__container {
   justify-content: center;
@@ -60,6 +82,11 @@ section{
     width: 100%;
   }
 }
+
+.membership {
+  height: 500px;
+  // border: 1px solid black;
+}
 .section__container.membership {
   header:nth-child(1n) {
     text-align: center;
@@ -67,6 +94,8 @@ section{
 }
 
 .membership__card {
+  justify-content: space-evenly;
+  flex-direction: column;
   h1 {
     text-align: left;
   }
@@ -77,13 +106,25 @@ section{
   border-radius: 5px;
 }
 
+.list__item::before,.unavailable::before {
+  font-weight: bold;
+  margin-right: 1rem;
+}
 .list__item::before {
   content: "\2713";
   color: green;
   font-weight: bold;
+  margin-right: 1rem;
 }
 .unavailable::before {
   content: "\2715";
   color: red;
   // font-weight: bold;
+}
+
+
+
+.membership__card--list{
+  padding: 0;
+  // border: 1px solid red;
 }

@@ -7,4 +7,10 @@
     color: #fff;
     font-weight: bold;
     font-size: 16px;
+    cursor: pointer;
+
+    &:hover{
+        transition:ease .35s;
+        transform: translate(0, 8px)
+    }
 }

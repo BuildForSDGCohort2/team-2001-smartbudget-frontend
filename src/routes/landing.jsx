@@ -35,7 +35,7 @@ export default function Landing() {
       <section
         className={`${style["section__container"]} ${style["membership"]}`}
       >
-        <header>
+        <header className={style["section__container--header"]}>
           <h2>Membership Card</h2>
           <p>Choose one of the cards and get started</p>
         </header>
@@ -55,14 +55,14 @@ export default function Landing() {
             <header>
               <h1>{item.title}</h1>
             </header>
-            <ul>
+            <ul className={style["membership__card--list"]}>
               <li className={style["list__item"]}>Budget plan</li>
               <li className={style["list__item"]}>Project monitor</li>
               <li
                 className={
                   item.type !== "premium"
                     ? style["unavailable"]
-                    : style["list__item "]
+                    : style["list__item"]
                 }
               >
                 Forecast
@@ -71,12 +71,12 @@ export default function Landing() {
                 className={
                   item.type !== "premium"
                     ? style["unavailable"]
-                    : style["list__item "]
+                    : style["list__item"]
                 }
               >
                 Calender
               </li>
-              <li className={style["list__item"]}>
+              <li>
                 {item.amt}/<span>month</span>
               </li>
             </ul>
