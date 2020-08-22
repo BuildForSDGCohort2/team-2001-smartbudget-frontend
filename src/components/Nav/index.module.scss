@@ -1,0 +1,33 @@
+.__container,
+.__container ul {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+  li {
+    margin: 0.7rem;
+  }
+}
+
+.__container {
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  //   border: 1px solid red;
+  padding: 0 1rem;
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+  background-color: hsl(0, 0%, 97%);
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  li{
+    color:#fff;
+    font-weight: bold;
+  }
+}
