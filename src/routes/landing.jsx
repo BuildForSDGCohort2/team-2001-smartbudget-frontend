@@ -6,6 +6,11 @@ import budget from "../assets/icons/budget-cost-svgrepo-com.svg";
 import budgetImg from "../assets/icons/picture-svgrepo-com.png";
 import Trending from "../assets/icons/ios-trending-up 1.png";
 import Cost from "../assets/icons/budget-svgrepo-com.png";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Avatar from "../assets/image/download 5.png";
+import Footer from "../components/Footer";
 
 export default function Landing() {
   const cardData = [
@@ -40,7 +45,7 @@ export default function Landing() {
           <p>Choose one of the cards and get started</p>
         </header>
 
-        <div className={style["membership__card"]}>
+        <div className={`${style["free"]} ${style["membership__card"]}`}>
           <h1>FREE trial card</h1>
           <p>Get Free 7 day trial</p>
           <p>
@@ -51,8 +56,8 @@ export default function Landing() {
         </div>
 
         {cardData.map((item) => (
-          <div className={style["membership__card"]}>
-            <header>
+          <div className={`${style["membership__card"]}`}>
+            <header className={style[item.type]}>
               <h1>{item.title}</h1>
             </header>
             <ul className={style["membership__card--list"]}>
@@ -76,18 +81,28 @@ export default function Landing() {
               >
                 Calender
               </li>
-              <li>
-                {item.amt}/<span>month</span>
-              </li>
             </ul>
+            <p className={style[item.type]}>
+              {item.amt}/<span>month</span>
+            </p>
           </div>
         ))}
       </section>
 
-      <section>
+      <section className={style["Testimonials"]} style={{ width: "100%" }}>
         <header>
-          <h1>Testmonials</h1>
+          <h1>Testimonials</h1>
         </header>
+        <Carousel />
+      </section>
+
+      <section
+        className={style["download__budgety"]}
+        style={{ width: "100%" }}
+      ></section>
+
+      <section className={style["download__budgety"]} style={{ width: "100%" }}>
+        <Footer />
       </section>
     </div>
   );
@@ -135,5 +150,59 @@ const Features = () => {
         })}
       </ul>
     </div>
+  );
+};
+
+const Carousel = () => {
+  const carouselData = [
+    {
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditaterepudiandae corrupti numquam tenetur! Accusantium nisi magnam velrerum veritatis harum impedit numquam obcaecati libero",
+      username: "sundar pichai",
+      image: Avatar,
+      title: "CEO Demin CO",
+    },
+    {
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditaterepudiandae corrupti numquam tenetur! Accusantium nisi magnam velrerum veritatis harum impedit numquam obcaecati libero",
+      username: "sundar pichai",
+      image: Avatar,
+      title: "CEO Demin CO",
+    },
+    {
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditaterepudiandae corrupti numquam tenetur! Accusantium nisi magnam velrerum veritatis harum impedit numquam obcaecati libero",
+      username: "sundar pichai",
+      image: Avatar,
+      title: "CEO Demin CO",
+    },
+  ];
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+  return (
+    <Slider {...settings}>
+      {carouselData.map((item) => {
+        return (
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Cupiditate repudiandae corrupti numquam tenetur! Accusantium nisi
+              magnam vel rerum veritatis harum impedit numquam obcaecati libero
+            </p>
+
+            <div>
+              <img src={item.image} alt="" />
+            </div>
+            <span>{item.username}</span>
+            <span>{item.title}</span>
+          </div>
+        );
+      })}
+    </Slider>
   );
 };
