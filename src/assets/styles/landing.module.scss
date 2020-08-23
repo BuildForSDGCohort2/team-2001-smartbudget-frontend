@@ -50,7 +50,36 @@ section:not(:last-of-type) {
   }
 }
 
+
+
+.feature__container {
+  justify-content: center;
+  height: 400px;
+  align-items: center;
+}
+
+.section__container {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  // margin-bottom: 2rem;
+  padding: 3rem;
+  // border: 2px solid red;
+  header {
+    width: 100%;
+  }
+}
+
+.membership {
+  // height: 500px;
+  // border: 1px solid black;
+}
+.section__container.membership {
+  header:nth-child(1n) {
+    text-align: center;
+  }
+}
 .section__container--header {
+  margin-bottom: 2rem;
   h2 {
     font-family: Lato;
     font-style: normal;
@@ -70,31 +99,6 @@ section:not(:last-of-type) {
     margin: 0;
   }
 }
-
-.feature__container {
-  justify-content: center;
-  height: 400px;
-  align-items: center;
-}
-
-.section__container {
-  flex-wrap: wrap;
-  justify-content: space-between;
-  header {
-    width: 100%;
-  }
-}
-
-.membership {
-  height: 500px;
-  // border: 1px solid black;
-}
-.section__container.membership {
-  header:nth-child(1n) {
-    text-align: center;
-  }
-}
-
 .free {
   padding: 1rem;
 }
@@ -130,6 +134,8 @@ section:not(:last-of-type) {
   border-radius: 5px;
 }
 
+
+
 .list__item::before,
 .unavailable::before {
   font-weight: bold;
@@ -153,6 +159,51 @@ section:not(:last-of-type) {
 }
 
 .Testimonials {
+  position: relative;
   background: #3498db;
-  height: 600px;
+  padding: 3rem !important;
+  // height: 400px;
+  box-sizing: border-box;
+  color: #fff;
+  
+  header{
+    h1{
+      text-align: center;
+    }
+
+
+  }
+
+  .slide{
+    text-align: center;
+    display: flex!important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid #fff;
+
+    img,span{
+      margin: 1rem 0;
+    }
+    img{
+      border-radius: 50%;
+    }
+    span{
+      display: inline-block;
+      margin: .5rem 0;
+
+    }
+    p{
+      width: 50%;
+      color: #fff;
+      line-height: 150%;
+      font-weight: bold;
+    }
+  }
+  // display: flex;
+  // width: 600px;
+  .slick-slider {
+    border: 1px solid #fff;
+
+  }
 }

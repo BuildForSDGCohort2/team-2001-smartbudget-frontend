@@ -89,7 +89,7 @@ export default function Landing() {
         ))}
       </section>
 
-      <section className={style["Testimonials"]} style={{ width: "100%" }}>
+      <section className={style["Testimonials"]} >
         <header>
           <h1>Testimonials</h1>
         </header>
@@ -185,10 +185,11 @@ const Carousel = () => {
     slidesToScroll: 1,
   };
   return (
+    <div>
     <Slider {...settings}>
       {carouselData.map((item) => {
         return (
-          <div>
+          <div style={{minWidth:"0px"}} className={style["slide"]}>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Cupiditate repudiandae corrupti numquam tenetur! Accusantium nisi
@@ -204,5 +205,6 @@ const Carousel = () => {
         );
       })}
     </Slider>
+    </div>
   );
 };
