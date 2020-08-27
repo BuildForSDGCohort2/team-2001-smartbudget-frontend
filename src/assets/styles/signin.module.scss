@@ -1,0 +1,48 @@
+.form--container,
+.form__page {
+  display: flex;
+}
+
+.form--container {
+  flex-direction: column;
+  margin-top: 7rem;
+  width: 50%;
+  width: 628px;
+  //   height: 798px;
+  padding: 2rem;
+
+  button {
+    width: 100%!important;
+  }
+
+  box-shadow: 0px 3px 12px -2px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+
+  label {
+    display: inline-block;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  input {
+    background: #f3f6f8;
+    border: 3px solid #e5e5e5;
+    box-sizing: border-box;
+    border-radius: 5px;
+    height: 54px;
+    margin-bottom: 1rem;
+    font-size: 16px;
+    padding: 0 1rem;
+
+    h1,
+    header {
+      margin: 0;
+    }
+  }
+}
+
+.form__page {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

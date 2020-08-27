@@ -1,25 +1,15 @@
 import React from "react";
-import { NavLink, useHistory } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import style from "./index.module.scss";
 
-export default function Nav() {
-  const history = useHistory();
+export default function DashboardNav() {
 
-  console.log("locate", history);
   return (
-    <div
-      className={
-        history.location.pathname === "/"
-          ? style["__container"]
-          : style["__container--others"]
-      }
-    >
-      <div>
-        <NavLink to="/">
-          <img src={""} alt="budgety-logo" />
-        </NavLink>
-      </div>
+    <div className={style["__container"]}>
       <ul>
+        <NavLink to="/">
+          <li>Budgety</li>
+        </NavLink>
         <NavLink to="/">
           <li>Services</li>
         </NavLink>
@@ -36,10 +26,10 @@ export default function Nav() {
 
       <ul>
         <NavLink to="/">
-          <li>Login</li>
+          <li>Notification</li>
         </NavLink>
         <NavLink to="/signup">
-          <li>Sign up</li>
+          <li>Jane Doe</li>
         </NavLink>
       </ul>
     </div>

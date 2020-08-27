@@ -12,37 +12,24 @@ ul {
   }
 }
 
-.__container,
-.__container--others {
+.__container{
   justify-content: space-between;
   align-items: center;
   height: 60px;
   //   border: 1px solid red;
   padding: 0 1rem;
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 5;
-  // background-color: hsla(0, 0%, 56%, 0.199);
-
+  background: #FFFFFF;
+  box-shadow: 0px 2px 15px -3px rgba(0, 0, 0, 0.25);
   a {
     color: black;
     text-decoration: none;
   }
 
   li {
-    color: #fff;
+    color: black;
     font-weight: bold;
   }
 }
-
-.__container--others {
-  box-shadow: 0px 2px 15px -3px rgba(0, 0, 0, 0.25);
-  top: 0;
-
-  li {
-    color: black ;
-  }
-  // border: 1px solid blue;
-}
-
-
