@@ -1,5 +1,6 @@
 .footer__container,
-footer ul,.social__media {
+footer ul,
+.social__media {
   display: flex;
   color: #fff;
   ul {
@@ -36,19 +37,34 @@ footer ul,.social__media {
     margin-right: 1rem;
   }
 
-  input{
-      padding: 0 1rem;
-      height: 30px;
-      border-radius: 1rem;
-      &:focus{
-          outline: none;
-      }
+  input {
+    padding: 0 1rem;
+    height: 30px;
+    border-radius: 1rem;
+    border: 0;
+    &:focus {
+      outline: none;
+    }
+  }
+  .subscribe{
+    background: #3498DB;
+    border-radius: 1rem;
+    width: fit-content;
+    padding: .1rem .3rem 0 0;
+  }
+
+  .fa__icon {
+    // background: #3498db;
+    // font-size: 24px;
+    margin: 0 .2rem;
+    cursor: pointer;
+    // padding: 1rem;
   }
 }
 
-.social__media{
-justify-content: space-between;
-margin-top: 1rem;
+.social__media {
+  justify-content: space-between;
+  margin-top: 1rem;
 }
 
 .copyright {

@@ -9,6 +9,7 @@ import {
   faTwitter,
   faInstagram,
   faYoutube,
+  faTelegramPlane,
 } from "@fortawesome/free-brands-svg-icons";
 export default function Footer() {
   return (
@@ -66,9 +67,9 @@ export default function Footer() {
             <h4>Subscribe</h4>
           </header>
           <p>Get mails about business progress and newsletter</p>
-          <div>
+          <div className={style["subscribe"]}>
             <input type="text" name="subscribe" placeholder="email" id="" />
-            <FontAwesomeIcon icon={"paper-plane"} />
+            <FontAwesomeIcon icon={faTelegramPlane} className={style["fa__icon"]}/>
           </div>
           <div className={style["social__media"]}>
             <FontAwesomeIcon icon={faFacebook} />
