@@ -1,0 +1,140 @@
+ul {
+  padding: 0;
+}
+
+.budget,
+.tasks {
+  height: 288px;
+}
+
+.barcharts > header,
+.data__key,
+.budget {
+  display: flex;
+}
+
+.calender,
+.budget,
+.tasks {
+  h4,
+  h3,h2{
+    color: #3498db;
+  }
+}
+
+
+.budget {
+  flex-wrap: wrap;
+  background: #ffffff;
+  box-shadow: 0px 4px 15px -2px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  width: 600px;
+  height: fit-content;
+  padding: 1rem;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+
+  header:first-child {
+    width: 100%;
+  }
+
+  header,
+  .revenue__stats {
+    display: flex;
+    justify-content: space-between;
+    // border: 1px solid blue;
+
+    h4 {
+      color: #3498db;
+    }
+  }
+
+  .revenue__stats {
+    header {
+      flex-direction: column;
+      color: green;
+    }
+    flex-direction: column;
+    width: 50%;
+    // border: 1px solid red;
+
+    h4 {
+      color: grey;
+    }
+  }
+}
+
+.tasks {
+  height: 288px;
+  width: 40%;
+  //   border: 1px solid red;
+
+  header {
+    h4 {
+      color: #3498db;
+      margin: 0;
+    }
+  }
+
+  background: #ffffff;
+  box-shadow: 0px 4px 15px -2px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  padding: 1rem;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // margin: 1rem;
+    border-bottom: 1px solid rgb(128, 128, 128);
+    padding: 0.5rem;
+
+    span {
+      display: inline-block;
+      font-size: 14px !important;
+    }
+  }
+}
+
+.done {
+  background: rgba(28, 198, 0, 0.7);
+  border-radius: 20px;
+  //   padding: .5rem 0;
+  width: 111.36px;
+  height: 24px;
+  text-align: center;
+}
+
+.barcharts {
+  background: #ffffff;
+  box-shadow: 0px 4px 15px -2px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  padding: 2rem;
+  width: 60%;
+  header {
+    justify-content: space-between;
+  }
+
+  .data__key {
+    align-items: center;
+    span {
+      display: inline-block;
+    }
+  }
+}
+
+.calender {
+  background: #ffffff;
+  box-shadow: 0px 4px 15px -2px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  width: 30%;
+  padding: 1rem;
+  h3{
+      color: rgb(37, 37, 37);
+  }
+
+  li{
+    border-bottom: 1px solid rgb(128, 128, 128);
+
+  }
+}
